@@ -1,31 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Oswald:wght@400;600&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(220, 8%, 12%);
+  color: hsl(220, 8%, 92%);
+}
+
+body {
+  font-family: "Noto Sans";
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2rem;
+}
+
+.title,
+.card_title {
+  font-family: "Oswald";
+}
+
+header {
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  display: flex;
+  gap: 0.5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  background-color: hsl(40, 69%, 52%);
+  box-shadow: 0 6px 4px hsla(30, 8%, 9%, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+header img {
+  width: 3rem;
 }
 
-.heart {
-  color: #ff0000;
+header .title {
+  font-size: 2.4rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.small {
-  font-size: 0.75rem;
+.card {
+  padding: 0.6rem 0.5rem;
+  border: solid 2px hsl(0, 70%, 62%);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 30vw;
+}
+
+.card_title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  color: hsl(0, 70%, 62%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: -0.1rem;
+}
+
+.input_field > label {
+  font-size: 0.6rem;
+  transition-duration: 200ms;
+}
+
+.input_field > input {
+  background-color: transparent;
+  border: solid 2px hsl(0, 3%, 32%);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  color: hsl(40, 8%, 92%, 0.8);
+  outline: none;
+  font-family: inherit;
+  transition-duration: 200ms;
+}
+
+.input_field > input:focus {
+  border-color: hsl(0, 70%, 62%);
+}
+
+.input_field > input:focus ~ label {
+  color: hsl(0, 70%, 62%);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn > button {
+  padding: 0.6rem 0.8rem;
+  font-family: "Noto Sans";
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(220, 8%, 92%);
+  background-color: hsl(0, 70%, 62%);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(52, 28, 28, 0.8);
+  transition-duration: 150ms;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 90vw;
+  }
 }
